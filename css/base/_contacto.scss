@@ -6,13 +6,13 @@ main {
     background-position: center;
     min-height: 88vh;
     display: grid;
-    place-content: center;
     text-align: center;
+    place-content: center;
     grid-template-areas:
-      "titulo"
-      "formulario"
-      "redes-sociales"
-      "telefono";
+    "titulo"
+    "formulario"
+    "redes-sociales"
+    "telefono";
     padding: 2rem;
     h3 {
       color: yellow;
@@ -32,6 +32,9 @@ main {
           padding: 5px;
           border-radius: 5px;
           border: solid 1px black;
+        }
+        .boton{
+          cursor: pointer;
         }
         textarea {
           margin: 0.4rem;
@@ -56,6 +59,9 @@ main {
               margin-right: 5px;
             }
           }
+          a:hover{
+            color:darkgoldenrod;
+          }
         }
       }
     }
@@ -72,6 +78,9 @@ main {
                   font-size: 1.5rem;
                   margin-right: 5px;
                 }
+              }
+              a:hover{
+                color:darkgoldenrod;
               }
             }
           }
@@ -98,6 +107,8 @@ main {
         grid-template-areas:
           "titulo titulo titulo"
           "formulario redes-sociales telefono";
+        grid-template-columns: repeat(3,1fr);
+
       }
     }
 }

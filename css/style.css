@@ -193,6 +193,7 @@ footer .formulario form input {
 
 footer .formulario form .boton {
   width: 60px;
+  cursor: pointer;
 }
 
 footer .copy {
@@ -338,8 +339,8 @@ main .contacto {
   min-height: 88vh;
   display: -ms-grid;
   display: grid;
-  place-content: center;
   text-align: center;
+  place-content: center;
       grid-template-areas: "titulo" "formulario" "redes-sociales" "telefono";
   padding: 2rem;
 }
@@ -370,6 +371,10 @@ main .contacto .formulario form input {
   padding: 5px;
   border-radius: 5px;
   border: solid 1px black;
+}
+
+main .contacto .formulario form .boton {
+  cursor: pointer;
 }
 
 main .contacto .formulario form textarea {
@@ -404,6 +409,10 @@ main .contacto .redes-sociales ul li a i {
   margin-right: 5px;
 }
 
+main .contacto .redes-sociales ul li a:hover {
+  color: darkgoldenrod;
+}
+
 main .contacto .telefono {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -428,6 +437,10 @@ main .contacto .telefono ul li a i {
   margin-right: 5px;
 }
 
+main .contacto .telefono ul li a:hover {
+  color: darkgoldenrod;
+}
+
 @media (min-width: 512px) {
   main .contacto {
     place-content: center;
@@ -439,6 +452,8 @@ main .contacto .telefono ul li a i {
   main .contacto {
     place-content: space-around;
         grid-template-areas: "titulo titulo titulo" "formulario redes-sociales telefono";
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -463,6 +478,10 @@ main .contacto .telefono ul li a i {
   background-color: #fff;
   text-align: center;
   border: solid .5px yellow;
+  margin: .2rem;
+  border-radius: 5px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .menu .comida .platos h3 {
@@ -474,11 +493,19 @@ main .contacto .telefono ul li a i {
   display: -ms-grid;
   display: grid;
   place-content: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: solid .5px yellow;
 }
 
 .menu .comida .platos p {
   color: firebrick;
   margin: 0.5rem .5rem;
+}
+
+.menu .comida .platos:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 @media (min-width: 512px) {
