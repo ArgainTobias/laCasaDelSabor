@@ -340,7 +340,7 @@ main .contacto {
   display: grid;
   place-content: center;
   text-align: center;
-      grid-template-areas: "titulo" "formulario" "redes-sociales";
+      grid-template-areas: "titulo" "formulario" "redes-sociales" "telefono";
   padding: 2rem;
 }
 
@@ -361,10 +361,11 @@ main .contacto .formulario {
 main .contacto .formulario form {
   display: -ms-grid;
   display: grid;
+  place-content: center;
 }
 
 main .contacto .formulario form input {
-  margin: .4rem;
+  margin: 0.4rem;
   width: 220px;
   padding: 5px;
   border-radius: 5px;
@@ -372,7 +373,7 @@ main .contacto .formulario form input {
 }
 
 main .contacto .formulario form textarea {
-  margin: .4rem;
+  margin: 0.4rem;
   padding: 5px;
   border-radius: 5px;
   border: solid 1px black;
@@ -385,28 +386,59 @@ main .contacto .redes-sociales {
   grid-area: redes-sociales;
 }
 
-main .contacto .redes-sociales div ul {
-  margin: .4rem;
+main .contacto .redes-sociales ul {
+  margin: 0.4rem;
 }
 
-main .contacto .redes-sociales div ul li {
+main .contacto .redes-sociales ul li {
   list-style: none;
   margin-bottom: 0.8rem;
 }
 
-main .contacto .redes-sociales div ul li a {
+main .contacto .redes-sociales ul li a {
   color: yellow;
 }
 
-main .contacto .redes-sociales div ul li a i {
+main .contacto .redes-sociales ul li a i {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+main .contacto .telefono {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: telefono;
+}
+
+main .contacto .telefono ul {
+  margin: 0.4rem;
+}
+
+main .contacto .telefono ul li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+}
+
+main .contacto .telefono ul li a {
+  color: yellow;
+}
+
+main .contacto .telefono ul li a i {
   font-size: 1.5rem;
   margin-right: 5px;
 }
 
 @media (min-width: 512px) {
   main .contacto {
+    place-content: center;
+        grid-template-areas: "titulo titulo" "formulario formulario" "redes-sociales telefono";
+  }
+}
+
+@media (min-width: 768px) {
+  main .contacto {
     place-content: space-around;
-        grid-template-areas: "titulo titulo" "formulario redes-sociales";
+        grid-template-areas: "titulo titulo titulo" "formulario redes-sociales telefono";
   }
 }
 
@@ -438,6 +470,10 @@ main .contacto .redes-sociales div ul li a i {
   color: yellow;
   padding: 0.3rem;
   margin-bottom: .4rem;
+  min-height: 70px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
 }
 
 .menu .comida .platos p {

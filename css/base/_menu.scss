@@ -18,6 +18,9 @@
                 color: yellow;
                 padding: 0.3rem;
                 margin-bottom: .4rem;
+                min-height: 70px;
+                display: grid;
+                place-content: center;
             }
             p{
                 color: firebrick;

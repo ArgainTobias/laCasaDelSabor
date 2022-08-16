@@ -1,71 +1,103 @@
-main{ 
-    .contacto{
-        background: linear-gradient(rgba(5,7,12,.90), rgba(5,7,12,.90)), url("../imagenes/fondo-restaurante.jpg");
-        background-size: cover;
-        background-position: center;
-        min-height: 88vh;
+main {
+  .contacto {
+    background: linear-gradient(rgba(5, 7, 12, 0.9), rgba(5, 7, 12, 0.9)),
+      url("../imagenes/fondo-restaurante.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 88vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    grid-template-areas:
+      "titulo"
+      "formulario"
+      "redes-sociales"
+      "telefono";
+    padding: 2rem;
+    h3 {
+      color: yellow;
+      margin: 0.4rem;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+    }
+    .formulario {
+      grid-area: formulario;
+      margin-bottom: 1.2rem;
+      form {
         display: grid;
         place-content: center;
-        text-align: center;
-        grid-template-areas: "titulo"
-                            "formulario"
-                            "redes-sociales";
-        padding: 2rem;
-        h3{
-            color: yellow;
-            margin: 0.4rem;
-            margin-bottom: 1.2rem;
-            text-transform: uppercase;
+        input {
+          margin: 0.4rem;
+          width: 220px;
+          padding: 5px;
+          border-radius: 5px;
+          border: solid 1px black;
         }
-        .formulario{
-            grid-area: formulario;
-            margin-bottom: 1.2rem;
-            form{
-                display: grid;
-                input{
-                    margin: .4rem;
-                    width: 220px;
-                    padding: 5px;
-                    border-radius: 5px;
-                    border: solid 1px black;
-                }
-                textarea{
-                    margin: .4rem;
-                    padding: 5px;
-                    border-radius: 5px;
-                    border: solid 1px black;
-                    width: 220px;
-                }
-            }
+        textarea {
+          margin: 0.4rem;
+          padding: 5px;
+          border-radius: 5px;
+          border: solid 1px black;
+          width: 220px;
         }
-        .redes-sociales{
-            grid-area: redes-sociales;
-            div{
-                ul{
-                    margin: .4rem;
-                    li{
-                        list-style: none;
-                        margin-bottom: 0.8rem;
-                        a{
-                            color: yellow;
-                            i{
-                                font-size: 1.5rem;
-                                margin-right: 5px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+      }
     }
+    .redes-sociales {
+      grid-area: redes-sociales;
+      ul {
+        margin: 0.4rem;
+        li {
+          list-style: none;
+          margin-bottom: 0.8rem;
+          a {
+            color: yellow;
+            i {
+              font-size: 1.5rem;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    .telefono{
+        grid-area: telefono;
+        ul {
+            margin: 0.4rem;
+            li {
+              list-style: none;
+              margin-bottom: 0.8rem;
+              a {
+                color: yellow;
+                i {
+                  font-size: 1.5rem;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+    }
+  }
 }
 
-@media(min-width:512px){
-    main{
-        .contacto{
-            place-content:space-around;
-            grid-template-areas: "titulo titulo"
-                                "formulario redes-sociales";
-        }
+@media (min-width: 512px) {
+  main {
+    .contacto {
+      place-content: center;
+      grid-template-areas:
+        "titulo titulo"
+        "formulario formulario"
+        "redes-sociales telefono";
+    }
+  }
+}
+
+@media (min-width: 768px) {
+    main {
+      .contacto {
+        place-content: space-around;
+        grid-template-areas:
+          "titulo titulo titulo"
+          "formulario redes-sociales telefono";
+      }
     }
 }
