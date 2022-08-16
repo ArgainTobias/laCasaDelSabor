@@ -1,0 +1,45 @@
+
+.menu{
+    background: linear-gradient(rgba(5,7,12,.90), rgba(5,7,12,.90)), url("../imagenes/fondo-restaurante.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 88vh;
+    padding: 2rem;
+    .comida{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 2rem;
+        .platos{
+            background-color: #fff;
+            text-align: center;
+            border: solid .5px yellow;
+            h3{
+                background-color: firebrick;
+                color: yellow;
+                padding: 0.3rem;
+                margin-bottom: .4rem;
+            }
+            p{
+                color: firebrick;
+                margin: 0.5rem .5rem;
+            }
+        }
+    }
+}
+
+//media queries 
+@media(min-width:512px){
+    .menu{
+        .comida{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}
+
+@media(min-width:952px){
+    .menu{
+        .comida{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+}

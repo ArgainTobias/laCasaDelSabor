@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+header {
+  min-height: 13vh;
+  background-color: firebrick;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid #000;
+  z-index: 2;
+}
+
+header nav {
+  margin: .5rem 0;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header nav ul li {
+  list-style: none;
+  margin: 0 3rem;
+  text-align: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: yellow;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+  color: darkgoldenrod;
+}
+
+.titulo {
+  text-align: center;
+  color: yellow;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "seccion" "redes" "direccion" "form" "cop";
+  place-content: center;
+  padding: 1rem;
+  background-color: firebrick;
+  border-top: 2px solid #000;
+}
+
+footer div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  place-content: center;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+footer div ul {
+  text-align: center;
+}
+
+footer div ul li {
+  list-style: none;
+}
+
+footer div ul li a {
+  text-decoration: none;
+  color: yellow;
+}
+
+footer div ul li a i {
+  font-size: 1.5rem;
+}
+
+footer div ul li a:hover {
+  color: darkgoldenrod;
+}
+
+footer div p {
+  text-align: center;
+  color: yellow;
+}
+
+footer .secciones {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: seccion;
+}
+
+footer .secciones ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+}
+
+footer .secciones ul li {
+  margin: 0 .2rem;
+}
+
+footer .redes {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: redes;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+footer .redes ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.1fr)[3];
+      grid-template-columns: repeat(3, 0.1fr);
+  place-content: center;
+  margin-right: 15px;
+}
+
+footer .redes ul li {
+  margin: 0 .2rem;
+}
+
+footer .direccion {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: direccion;
+}
+
+footer .formulario {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: form;
+  text-align: center;
+}
+
+footer .formulario h5 {
+  color: yellow;
+}
+
+footer .formulario form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.2fr)[2];
+      grid-template-columns: repeat(2, 0.2fr);
+  place-content: center;
+}
+
+footer .formulario form input {
+  height: 35px;
+  width: 200px;
+  margin: 0 .5rem;
+  border-radius: 5px;
+  border: solid 1px black;
+  padding: 5px;
+  margin: auto;
+}
+
+footer .formulario form .boton {
+  width: 60px;
+}
+
+footer .copy {
+  text-align: center;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: cop;
+}
+
+@media (min-width: 512px) {
+  header nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+  footer {
+        grid-template-areas: "seccion redes" "direccion direccion" "form  cop";
+  }
+}
+
+@media (min-width: 768px) {
+  .titulo {
+    font-size: 2rem;
+  }
+  footer {
+    -ms-grid-columns: (0.6fr)[1];
+        grid-template-columns: repeat(1, 0.6fr);
+        grid-template-areas: "seccion redes direccion" "form . cop";
+  }
+}
+
+main {
+  min-height: 88vh;
+}
+
+main .division {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "img1 img2" "img3 img3";
+}
+
+main .division .img1 {
+  height: 290px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.4)), to(rgba(5, 7, 12, 0.4))), url("../imagenes/fondo-index3.jpg");
+  background: linear-gradient(rgba(5, 7, 12, 0.4), rgba(5, 7, 12, 0.4)), url("../imagenes/fondo-index3.jpg");
+  background-size: cover;
+  background-position: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img1;
+}
+
+main .division .img2 {
+  height: 290px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.4)), to(rgba(5, 7, 12, 0.4))), url("../imagenes/fondo-index2.jpg");
+  background: linear-gradient(rgba(5, 7, 12, 0.4), rgba(5, 7, 12, 0.4)), url("../imagenes/fondo-index2.jpg");
+  background-size: cover;
+  background-position: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: img2;
+}
+
+main .division .img3 {
+  height: 280px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.4)), to(rgba(5, 7, 12, 0.4))), url("../imagenes/fondo-index1.jpg");
+  background: linear-gradient(rgba(5, 7, 12, 0.4), rgba(5, 7, 12, 0.4)), url("../imagenes/fondo-index1.jpg");
+  background-size: cover;
+  background-position: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: img3;
+}
+
+main .division .img3 h1 {
+  text-align: center;
+  color: yellow;
+  margin: 2rem;
+  text-transform: uppercase;
+}
+
+main .division .img3 h3 {
+  text-align: center;
+  color: yellow;
+}
+
+main .especialidades {
+  padding: 1.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.9)), to(rgba(5, 7, 12, 0.9))), url("../imagenes/fondo-restaurante.jpg");
+  background: linear-gradient(rgba(5, 7, 12, 0.9), rgba(5, 7, 12, 0.9)), url("../imagenes/fondo-restaurante.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+
+main .especialidades h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem;
+  margin-bottom: 3rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+main .especialidades .contenedor-listas {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+main .especialidades .contenedor-listas .lista {
+  text-align: center;
+}
+
+main .especialidades .contenedor-listas .lista h4 {
+  color: white;
+  text-transform: uppercase;
+}
+
+main .especialidades .contenedor-listas .lista p {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+@media (min-width: 512px) {
+  main .especialidades .contenedor-listas {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+main .contacto {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.9)), to(rgba(5, 7, 12, 0.9))), url("../imagenes/fondo-restaurante.jpg");
+  background: linear-gradient(rgba(5, 7, 12, 0.9), rgba(5, 7, 12, 0.9)), url("../imagenes/fondo-restaurante.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 88vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  text-align: center;
+      grid-template-areas: "titulo" "formulario" "redes-sociales";
+  padding: 2rem;
+}
+
+main .contacto h3 {
+  color: yellow;
+  margin: 0.4rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+main .contacto .formulario {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: formulario;
+  margin-bottom: 1.2rem;
+}
+
+main .contacto .formulario form {
+  display: -ms-grid;
+  display: grid;
+}
+
+main .contacto .formulario form input {
+  margin: .4rem;
+  width: 220px;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+main .contacto .formulario form textarea {
+  margin: .4rem;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px black;
+  width: 220px;
+}
+
+main .contacto .redes-sociales {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: redes-sociales;
+}
+
+main .contacto .redes-sociales div ul {
+  margin: .4rem;
+}
+
+main .contacto .redes-sociales div ul li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+}
+
+main .contacto .redes-sociales div ul li a {
+  color: yellow;
+}
+
+main .contacto .redes-sociales div ul li a i {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+@media (min-width: 512px) {
+  main .contacto {
+    place-content: space-around;
+        grid-template-areas: "titulo titulo" "formulario redes-sociales";
+  }
+}
+
+.menu {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(5, 7, 12, 0.9)), to(rgba(5, 7, 12, 0.9))), url("../imagenes/fondo-restaurante.jpg");
+  background: linear-gradient(rgba(5, 7, 12, 0.9), rgba(5, 7, 12, 0.9)), url("../imagenes/fondo-restaurante.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 88vh;
+  padding: 2rem;
+}
+
+.menu .comida {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+}
+
+.menu .comida .platos {
+  background-color: #fff;
+  text-align: center;
+  border: solid .5px yellow;
+}
+
+.menu .comida .platos h3 {
+  background-color: firebrick;
+  color: yellow;
+  padding: 0.3rem;
+  margin-bottom: .4rem;
+}
+
+.menu .comida .platos p {
+  color: firebrick;
+  margin: 0.5rem .5rem;
+}
+
+@media (min-width: 512px) {
+  .menu .comida {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 952px) {
+  .menu .comida {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */

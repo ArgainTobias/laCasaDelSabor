@@ -1,0 +1,81 @@
+main{
+    min-height: 88vh;
+    .division{
+        display: grid;
+        grid-template-areas: "img1 img2"
+                            "img3 img3";
+        .img1{
+            height: 290px;
+            background: linear-gradient(rgba(5,7,12,.40), rgba(5,7,12,.40)), url("../imagenes/fondo-index3.jpg");
+            background-size: cover;
+            background-position: center;
+            grid-area: img1;
+        }
+        .img2{
+            height: 290px;
+            background: linear-gradient(rgba(5,7,12,.40), rgba(5,7,12,.40)), url("../imagenes/fondo-index2.jpg");
+            background-size: cover;
+            background-position: center;
+            grid-area: img2;
+        }
+        .img3{
+            height: 280px;
+            background: linear-gradient(rgba(5,7,12,.40), rgba(5,7,12,.40)), url("../imagenes/fondo-index1.jpg");
+            background-size: cover;
+            background-position: center;
+            grid-area: img3;
+            h1{
+                text-align: center;
+                color: yellow;
+                margin: 2rem;
+                text-transform: uppercase;
+            }
+            h3{
+                text-align: center;
+                color: yellow;
+            }
+        }
+    }
+    .especialidades{
+        padding: 1.5rem;
+        background: linear-gradient(rgba(5,7,12,.90), rgba(5,7,12,.90)), url("../imagenes/fondo-restaurante.jpg");
+        background-size: cover;
+        background-position: center;
+        min-height: 500px;
+        h2{
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 2rem;
+            margin-bottom: 3rem;
+            color: white;
+            text-transform: uppercase;
+        }
+        .contenedor-listas{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            .lista{
+                text-align: center;
+                h4{
+                    color: white;
+                    text-transform: uppercase;
+                }
+                p{
+                    margin-bottom: 1.5rem;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// media queries
+
+@media(min-width:512px){
+    main{
+        .especialidades{
+            .contenedor-listas{
+            grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+}

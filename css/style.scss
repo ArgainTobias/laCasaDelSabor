@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+header{
+    min-height: 13vh;
+    background-color: firebrick;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid #000;
+    z-index: 2;
+    nav{
+        margin: .5rem 0;
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                list-style: none;
+                margin: 0 3rem;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: yellow;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                }
+                a:hover{
+                    color:darkgoldenrod;
+                }
+                
+            }
+        }
+    }
+}
+
+.titulo{
+    text-align: center;
+    color: yellow;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    grid-area: titulo;
+}
+
+footer{
+    display: grid;
+    grid-template-areas: "seccion"
+                        "redes"
+                        "direccion"
+                        "form"
+                        "cop";
+    place-content: center;
+    padding: 1rem;
+    background-color: firebrick;
+    border-top: 2px solid #000;
+    div{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        place-content: center;
+        margin: 0 1rem;
+        margin-bottom: 1rem;
+        ul{
+            text-align: center;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: yellow;
+                    i{
+                        font-size: 1.5rem;
+                    }
+                }
+                a:hover{
+                    color:darkgoldenrod;
+                }
+            }
+        }
+        p{
+            text-align: center;
+            color: yellow;
+        }
+    }
+    .secciones{
+        grid-area: seccion; 
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            place-content: center;
+            li{
+                margin: 0 .2rem;
+            }   
+        }
+    }
+    .redes{
+        grid-area: redes;
+        display: grid;
+        place-content: center;
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3,.1fr);
+            place-content: center;
+            margin-right: 15px;
+            li{
+                margin: 0 .2rem;
+            }
+        }
+    }
+    .direccion{
+        grid-area: direccion;
+    }
+    .formulario{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-area: form;
+        text-align: center;
+        h5{
+            color: yellow;
+        }
+        form{
+            display: grid;
+            grid-template-columns: repeat(2,.2fr);
+            place-content: center;
+            input{
+                height: 35px;
+                width: 200px;
+                margin: 0 .5rem;
+                border-radius: 5px;
+                border: solid 1px black;
+                padding: 5px;
+                margin: auto;
+            }
+            .boton{
+                width: 60px;
+            }
+        }
+    }
+    .copy{
+        text-align: center;
+        grid-area: cop;
+    }
+}
+
+// media queries todos los html
+
+@media(min-width:512px){
+    header{
+        nav{
+            ul{
+                flex-direction: row;
+                li{
+                    a{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+    footer{
+            grid-template-areas: "seccion redes"
+                        "direccion direccion"
+                        "form  cop";
+    }
+}
+
+@media(min-width:768px){
+
+    .titulo{
+        font-size: 2rem;
+    }
+
+    footer{
+        grid-template-columns: repeat(1,.6fr);
+
+        grid-template-areas: "seccion redes direccion"
+                        "form . cop";
+    }
+}
+
+@import 'base/index';
+@import 'base/contacto';
+@import 'base/menu';
