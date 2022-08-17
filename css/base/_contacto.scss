@@ -108,6 +108,9 @@ main {
           "titulo titulo titulo"
           "formulario redes-sociales telefono";
         grid-template-columns: repeat(3,1fr);
+        h3{
+          font-size: 1.8rem;
+        }
 
       }
     }

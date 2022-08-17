@@ -184,6 +184,12 @@ footer{
     }
 }
 
+@media(min-width:952px){
+    .titulo{
+        font-size: 3rem
+    }
+}
+
 @import 'base/index';
 @import 'base/contacto';
 @import 'base/menu';

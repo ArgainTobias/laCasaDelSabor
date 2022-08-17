@@ -1,29 +1,31 @@
 main{
-    min-height: 88vh;
     .division{
+        min-height: 88vh;
         display: grid;
         grid-template-areas: "img1 img2"
                             "img3 img3";
         .img1{
-            height: 290px;
+            min-height: 290px;
             background: linear-gradient(rgba(5,7,12,.40), rgba(5,7,12,.40)), url("../imagenes/fondo-index3.jpg");
             background-size: cover;
             background-position: center;
             grid-area: img1;
         }
         .img2{
-            height: 290px;
+            min-height: 290px;
             background: linear-gradient(rgba(5,7,12,.40), rgba(5,7,12,.40)), url("../imagenes/fondo-index2.jpg");
             background-size: cover;
             background-position: center;
             grid-area: img2;
         }
         .img3{
-            height: 280px;
+            min-height: 280px;
             background: linear-gradient(rgba(5,7,12,.40), rgba(5,7,12,.40)), url("../imagenes/fondo-index1.jpg");
             background-size: cover;
             background-position: center;
             grid-area: img3;
+            display: grid;
+            place-content: center;
             h1{
                 text-align: center;
                 color: yellow;
@@ -75,6 +77,21 @@ main{
         .especialidades{
             .contenedor-listas{
             grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+}
+
+@media(min-width:1028px){
+    main{
+        .division{
+            .img3{
+                h1{
+                    font-size: 3.5rem;
+                }
+                h3{
+                    font-size: 2rem;
+                }
             }
         }
     }
