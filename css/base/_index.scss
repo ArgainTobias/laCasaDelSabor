@@ -5,14 +5,14 @@ main{
         grid-template-areas: "img1 img2"
                             "img3 img3";
         .img1{
-            min-height: 290px;
+            min-height: 240px;
             background: linear-gradient(rgba(5,7,12,.40), rgba(5,7,12,.40)), url("../imagenes/fondo-index3.jpg");
             background-size: cover;
             background-position: center;
             grid-area: img1;
         }
         .img2{
-            min-height: 290px;
+            min-height: 240px;
             background: linear-gradient(rgba(5,7,12,.40), rgba(5,7,12,.40)), url("../imagenes/fondo-index2.jpg");
             background-size: cover;
             background-position: center;
