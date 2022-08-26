@@ -6,7 +6,7 @@ Options -Indexes
 RewriteEngine on
 RewriteBase /perutec/
 RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME}.html !-f
  
 RewriteRule ^(.*)$ $1.html
 
